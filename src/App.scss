@@ -2,21 +2,32 @@ $primary-bkg: white;
 $primary-txt-color: black;
 $curved-borders: 25px;
 $shadow: 0px 0px 15px rgba(0,0,0,0.2);
+$txt-shadow: 0 1px 1px rgba(0,0,0,0.5);
 $input-border: 1px solid grey;
 $test-viewR: 1px solid red;
 $test-viewG: 1px solid green;
 $test-viewB: 1px solid blue;
 
-
-@mixin flexRow {
+@mixin flexRowCenter {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@mixin flexRowBottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 @mixin flexCol {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+@mixin flexColBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -25,71 +36,45 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    @include flexRow;
+    @include flexRowCenter;
 }
 
 main {
     box-shadow: $shadow;
     height: 90vh;
     width: 80vw;
-    @include flexRow;
+    @include flexRowCenter;
     border-radius: $curved-borders;
 }
 
 .ticketDisplay {
-    background-color: rgb(91, 181, 94);
+    background: linear-gradient(rgb(254, 161, 0),rgb(255, 225, 0));
     height: 100%;
     border-top-left-radius: $curved-borders;
     border-bottom-left-radius: $curved-borders;
     width: 50%;
-    @include flexRow;
+    @include flexCol;
+
+    button {
+        background-color: black;
+        font-family: 'Poppins',sans-serif;
+        cursor: pointer;
+        box-shadow: $shadow;
+        margin: 25px;
+        border: none;
+        padding: 15px;
+        border-radius: $curved-borders;
+        }
+    button:active {
+        box-shadow: none;
+    }
 }
 
 .formSection {
-    background-color: beige;
+    background-color: $primary-bkg;
     border-top-right-radius: $curved-borders;
     border-bottom-right-radius: $curved-borders;
     height: 100%;
     width: 100%;
-    @include flexRow;
-}
-
-form {
-    display: flex;
-    padding: 10px;
-    border-radius: $curved-borders;
-    background-color: rgb(70, 42, 0);
-    color: white;
-    flex-direction: column;
-    gap: 30px;
-    width: 60%;
-}
-
-form input {
-    width: 90%;
-    background-color: $primary-bkg;
-    border-radius: $curved-borders;
-    border: $input-border;
-    padding: 5px
-}
-
-.dateID {
-    gap: 50px;
-}
-
-.dateInfo {
-    @include flexRow;
-    width: 100%;
-    gap: 10px
-}
-
-.dateID {
-    @include flexRow;
-}
-
-form button {
-    background-color: rgb(0, 176, 0);
-    border-radius: $curved-borders;
-    border: none;
-    padding: 10px;
+    @include flexRowCenter;
 }
