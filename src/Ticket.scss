@@ -27,6 +27,7 @@
         p {
             font-size: 12px;
         }
+
         .tixCode {
             font-size: 14px;
         }
@@ -36,16 +37,17 @@
         border-bottom: 1px dashed black;
         height: 45%;
         @include App.flexRowBottom;
-        gap: 15px;
+        gap: 10px;
 
         .tixName {
             text-align: left;
             @include ticket-detail;
         }
+
         .tixDate {
             text-align: left;
             @include ticket-detail;
-        
+
         }
     }
 
@@ -54,7 +56,7 @@
     }
 
     img {
-    height: 75px;
+        height: 75px;
     }
 }
 
@@ -63,9 +65,9 @@
         transform: translateY(20%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0%);
         opacity: 1;
     }
 }
-

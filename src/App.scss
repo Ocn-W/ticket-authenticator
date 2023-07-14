@@ -1,8 +1,8 @@
 $primary-bkg: white;
 $primary-txt-color: black;
 $curved-borders: 25px;
-$shadow: 0px 0px 15px rgba(0,0,0,0.2);
-$txt-shadow: 0 1px 1px rgba(0,0,0,0.5);
+$shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+$txt-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 $input-border: 1px solid grey;
 $test-viewR: 1px solid red;
 $test-viewG: 1px solid green;
@@ -13,17 +13,20 @@ $test-viewB: 1px solid blue;
     justify-content: center;
     align-items: center;
 }
+
 @mixin flexRowBottom {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
+
 @mixin flexCol {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 @mixin flexColBottom {
     display: flex;
     flex-direction: column;
@@ -48,7 +51,7 @@ main {
 }
 
 .ticketDisplay {
-    background: linear-gradient(rgb(254, 161, 0),rgb(255, 225, 0));
+    background: linear-gradient(rgb(254, 161, 0), rgb(255, 225, 0));
     height: 100%;
     border-top-left-radius: $curved-borders;
     border-bottom-left-radius: $curved-borders;
@@ -57,14 +60,15 @@ main {
 
     button {
         background-color: black;
-        font-family: 'Poppins',sans-serif;
+        font-family: 'Poppins', sans-serif;
         cursor: pointer;
         box-shadow: $shadow;
         margin: 25px;
         border: none;
         padding: 15px;
         border-radius: $curved-borders;
-        }
+    }
+
     button:active {
         box-shadow: none;
     }

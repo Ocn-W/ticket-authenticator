@@ -19,15 +19,19 @@ form {
         padding: 5px
     }
 
-    .dateInfo {
+    .date-ID {
         @include App.flexRowCenter;
-        width: 100%;
-        gap: 5px;
+
+        gap: 70px;
     }
 
-    .dateID {
-        gap: 50px;
-        @include App.flexRowCenter;
+    .dateInfo {
+        @include App.flexCol;
+        width: 30%;
+    }
+
+    .ticketSpecialID {
+        width: 20%;
     }
 
     button {
