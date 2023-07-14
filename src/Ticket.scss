@@ -14,6 +14,7 @@
     background-color: App.$primary-bkg;
     box-shadow: App.$shadow;
     text-align: center;
+    animation: appear .3s linear forwards;
 
     .tixEvent {
         border: 1px solid cornflowerblue;
@@ -22,6 +23,7 @@
         border-top-left-radius: App.$curved-borders;
         border-top-right-radius: App.$curved-borders;
         background-color: cornflowerblue;
+
         p {
             font-size: 12px;
         }
@@ -53,6 +55,17 @@
 
     img {
     height: 75px;
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }
 

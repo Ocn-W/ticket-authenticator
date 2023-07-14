@@ -5,13 +5,15 @@ import QRCode from '../assets/QRCode.png';
 export default function Ticket() {
     const [ticketID, setTicketID] = useState('');
     const [ticketDate, setTicketDate] = useState('');
-    const [specialID, setSpecialID] = useState('');        
+    const [specialID, setSpecialID] = useState('');    
+    const [showTicket, isTicketVisible] = useState(false);   
     const numbers = '0123456789';
 
     function generateTicket() {
-        setTicketID(generateID);
-        setTicketDate(generateDate);
-        setSpecialID(generateSpecID);      
+      setTicketID(generateID);
+      setTicketDate(generateDate);
+      setSpecialID(generateSpecID);
+      isTicketVisible(true);
     }
 
     function generateID() {
@@ -58,7 +60,9 @@ export default function Ticket() {
 
   return (
     <>
+    {showTicket ? (
       <div className="ticket">
+        
         <section className="tixEvent">
           <p>Event Name</p>
           <p className="tixCode">{ticketID}</p>
@@ -94,7 +98,8 @@ export default function Ticket() {
         <p className="tixSpecCode">{specialID}</p>
         <img src={QRCode} />
       </div>
-
+      ) : <p>Your Ticket</p>}
+        
       <button onClick={generateTicket}>Generate Ticket</button>
     </>
   );

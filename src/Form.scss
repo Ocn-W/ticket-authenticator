@@ -12,6 +12,7 @@ form {
 
     input {
         width: 90%;
+        color: black;
         background-color: App.$primary-bkg;
         border-radius: App.$curved-borders;
         border: App.$input-border;
@@ -21,7 +22,7 @@ form {
     .dateInfo {
         @include App.flexRowCenter;
         width: 100%;
-        gap: 10px
+        gap: 5px;
     }
 
     .dateID {

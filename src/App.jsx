@@ -9,7 +9,9 @@ export default function App() {
       <section className='ticketDisplay'>
         <Ticket/>
       </section>
+      
       <section className='formSection'>
+        <h1>CONFIRMATION FORM</h1>
         <Form />
       </section>
     </main>

@@ -76,5 +76,5 @@ main {
     border-bottom-right-radius: $curved-borders;
     height: 100%;
     width: 100%;
-    @include flexRowCenter;
+    @include flexCol;
 }
