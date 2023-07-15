@@ -1,18 +1,20 @@
 import React, { useState, useContext } from "react";
 import { TicketInfo } from "../contexts/TicketContext";
 import "../Form.scss";
+import FormSuccess from "./FormSuccess";
 
 export default function Form() {
   const { ticketID, ticketDate, specialID } = useContext(TicketInfo);
   const [idVal, setID] = useState("");
   const [spIDVal, setSpID] = useState("");
   const [dateVal, setDate] = useState("");
+  const [success, setFormSuccess] = useState(false);
 
   function submit(e) {
     if (idVal === ticketID && dateVal === ticketDate && spIDVal === specialID) {
       e.preventDefault();
-      alert("Form successfully submitted!");
       console.log(e);
+      setFormSuccess(true);
       setID("");
       setDate("");
       setSpID("");
@@ -35,6 +37,7 @@ export default function Form() {
 
   return (
     <>
+    {success ? <FormSuccess goBack={setFormSuccess}/> : 
       <form onSubmit={submit}>
         <div>
           <label htmlFor="ticketholderName">Ticketholder Name</label>
@@ -87,6 +90,7 @@ export default function Form() {
         </div>
         <button type="submit">Verify Ticket!</button>
       </form>
+      }
     </>
   );
 }

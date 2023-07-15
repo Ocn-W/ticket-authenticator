@@ -41,3 +41,41 @@ form {
         padding: 10px;
     }
 }
+
+.formSuccess {
+    @include App.flexCol;
+    height: 50%;
+    width: 60%;
+    box-shadow: App.$shadow;
+    border-radius: App.$curved-borders;
+    background-color: white;
+    animation: successDisplay 0.5s ease forwards;
+
+    h2,
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .ticketSVG {
+        height: 100px;
+    }
+
+    button {
+        background-color: black;
+        box-shadow: App.$shadow;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: App.$curved-borders;
+    }
+}
+
+@keyframes successDisplay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
