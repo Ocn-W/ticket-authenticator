@@ -21,7 +21,6 @@ form {
 
     .date-ID {
         @include App.flexRowCenter;
-
         gap: 70px;
     }
 
@@ -78,4 +77,14 @@ form {
     100% {
         opacity: 1;
     }
+}
+
+@media (width <= 800px) {
+    form {
+        width: 90%;
+        .ticketSpecialID {
+            width: 30%;
+        }
+    }
+
 }

@@ -9,7 +9,7 @@
 .ticket {
     height: 100%;
     margin: 20px;
-    width: 50%;
+    min-width: 50%;
     border-radius: App.$curved-borders;
     background-color: App.$primary-bkg;
     box-shadow: App.$shadow;
@@ -47,7 +47,6 @@
         .tixDate {
             text-align: left;
             @include ticket-detail;
-
         }
     }
 
@@ -69,5 +68,47 @@
     100% {
         transform: translateY(0%);
         opacity: 1;
+    }
+}
+
+@media (width <= 800px) {
+    .ticket {
+        @include App.flexRowCenter;
+        height: 20vh;
+
+        .tixEvent {
+            height: 100%;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: App.$curved-borders;
+            @include App.flexCol;
+            .tixCode {
+                padding: 10px;
+            }
+        }
+        .tixUser {
+            border-bottom: none;
+            border-right: 1px dashed black;
+            height: 100%;
+            @include App.flexCol;
+            gap: 0;
+            
+            .tixName {
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+                @include ticket-detail;
+            }
+
+            .tixDate {
+                text-align: center;
+                padding: 10px;
+                width: 30vw;
+                @include ticket-detail;
+            }
+        }
+        .specialCode {
+            @include App.flexCol;
+            padding: 10px;
+        }
     }
 }

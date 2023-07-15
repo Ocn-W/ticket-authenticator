@@ -100,9 +100,10 @@ export default function Ticket() {
               <p>{ticketDate}</p>
             </div>
           </section>
-
-          <p className="tixSpecCode">{specialID}</p>
-          <img src={QRCode} />
+          <section className="specialCode">
+            <p className="tixSpecCode">{specialID}</p>
+            <img src={QRCode} />
+          </section>
         </div>
       ) : (
         <p>Your Ticket</p>
