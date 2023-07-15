@@ -2,7 +2,7 @@
 
 ## A Mock Form Validation Site
  
-This website makes explores ways to mock data in order to handle form submission in React
+This website explores ways to mock data in order to handle form submission in React
 
 ![TicketAuthSite](https://github.com/Ocn-W/ticket-authenticator/assets/112736754/1459e8aa-d935-4094-8f0e-51978edcbdeb)
 
